@@ -1,0 +1,44 @@
+\section{Prémices d'algèbre}
+	Introduction [TODO]
+	
+	Dans le reste de cette section, on fixera~$G$ \marginnote{$G$} un groupe abélien fini, et~$n$ un entier naturel non nul.
+	
+	Soient~$F: V \rightarrow G$ et~$C : V \rightarrow G^*$ deux homomorphismes, on définit les homomorphismes~$\phiCF : V \rightarrow G^* \oplus G$ et~$\phiFC : V \rightarrow G \oplus G^*$ en posant pour tout vecteur~$v$ de~$V$ :~$\phiCF(v) = (C(v),F(v))$ et~$\phiFC(v) = (F(v),C(v))$\marginnote{$\phiCF, \phiFC$}.
+	
+	Soient maintenant~$\gamma$ un réel tel que~$0<\gamma<1$ et~$F : V \rightarrow G$ un homomorphisme. On dit qu'un homomorphisme~$C : V \rightarrow G^*$ est $\gamma$-\emph{robuste}\marginnote{robuste} pour~$F$ lorsque que pour tout~$\sigma \subset [n]$ de cardinal~$\#\sigma < \gamma n$ on a~$\ker(\phiFC\restr{\Vsig}) \neq \ker(F\restr{\Vsig})$. Dans le cas contraire, on dit que~$C$ est~$\gamma$-\emph{faible}\marginnote{faible} pour~$F$. S'il n'y a pas d'ambiguïté on dira simplement \emph{robuste} ou \emph{faible}.
+	
+	\begin{lem}[Estimation de la quantité d'homomorphismes faibles]\label{lem:3.1}
+		Il existe une constante~$C_G$, qui ne dépend que de~$G$ et telle que : pour tout entier~$n$, pour tout réel~$\gamma$ strictement compris entre~$0$ et~$1$, et pour tout homomorphisme~$F : V \rightarrow G$ on ait :
+		\[
+			\#\{C\in\Hom(H,G^*), C\text{ faible pour}F\}
+			\leq
+			C_G \binom{n}{\entierSup{\gamma n} - 1} \# G^{\gamma n}.
+		\] 
+	\end{lem}
+	\begin{dem}
+		[TODO]
+	\end{dem}
+	On définit l'application d'évaluation~$e : G^* \times G \rightarrow R$\marginnote{$e$} par~$e((g^*,g)) = g^*(g)$. On définit enfin le morphisme~$t : (G\oplus G^*) \times (G^*\oplus G) \rightarrow R$ par
+	\[
+		t : ((g_1,\phi_1),(\phi_2,g_2) \mapsto (\phi_2(g_1) ,\phi_1(g_2))\text{\marginnote{$t$}}.
+	\]
+	De telle sorte que~$t(\phiCF(u), \phiFC(v)) = (e(C(u), F(v)), e(C(v), F(u)))$. On a alors le résultat suivant :
+	\begin{lem}\label{lem:3.2}
+		Soient~$F: V \rightarrow G$ et~$C : V \rightarrow G^*$ deux homomorphismes, et soit~$U$ un sous module de~$V$ tel que~$F(U)=G$. Si maintenant~$U'$ est un sous-module de~$V$ tel que l'application~$t$ soit nulle sur le sous-espace~$\phiCF(U)\times\phiFC(U')$ ; alors :
+		
+		Si~$p : G \oplus G^* \rightarrow G$ est la projection canonique, alors~$p\restr{\phiFC(U')}$ est injective. En particulier on a l'égalité :~$\ker(\phiFC\restr{U'}) = \ker(F\restr{U'})$.
+	\end{lem}
+	\begin{dem}
+		[TODO]
+	\end{dem}
+	\begin{coro}\label{coro:3.3}
+		Soient~$F: V \rightarrow G$ et~$C : V \rightarrow G^*$ deux homomorphismes, soit~$U$ un sous module de~$V$ tel que~$F(U)=G$. Dés lors, on a :
+		\[
+			\text{si } \#\{i\in[n], t(\phiCF(U), \phiFC(v_i)) \neq 0\} < \gamma n
+			\text{ alors }C 
+			\text{ est faible pour }F.
+		\]
+	\end{coro}
+	\begin{dem}
+		[TODO]
+	\end{dem}

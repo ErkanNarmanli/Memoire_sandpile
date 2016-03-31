@@ -136,7 +136,11 @@
 \DeclareMathOperator{\Res}{Rés}
 \DeclareMathOperator{\B}{B}
 \DeclareMathOperator{\Li}{Li}
+\DeclareMathOperator{\Hom}{Hom}
 %Sans-arguments-------------------------------------------------------------------------------------
+\newcommand{\phiCF}{\phi_{C,F}}
+\newcommand{\phiFC}{\phi_{F,C}}
+\newcommand{\Vsig}{V_\sigma}
 \newcommand{\Sk}{\mathbb{S}_k}								%Slab de taille k
 \newcommand{\priv}{\setminus}								%Soustraction ensembliste
 \renewcommand{\leq}{\leqslant}								%Parce que \leqslant est plus joli
@@ -158,6 +162,7 @@
 	%Pour recréer un \cleardoublepage qui marche aussi en oneside
 %Avec-arguments-------------------------------------------------------------------------------------
 \makeatletter
+\newcommand{\restr}[1]{{}_{|#1}}
 \newcommand{\Cmin}[1][\omega]{\gamma_{\mathrm{min}}(#1)}%Chemin minimal de \gamma
 \newcommand{\ZnB}[1][n]{\overline{Z}_{#1}}		%L'ensemble Z_n barre
 \newcommand{\SnB}[1][3n]{\overline{S}_{#1}}		%S_{3n} /!\ arg. par défaut : 3n
