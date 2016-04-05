@@ -1,13 +1,18 @@
 \vspace*{0.3cm}
-	Le modèle de percolation a été introduit par le mathématicien anglais John Hammerersley en 1957 dans son article \emph{Percolation Processes: Lower Bounds for the Critical Probability}~\cite{hammer}. En~1960, T.E. Harris démontre dans~\cite{harris} qu'il n'y a pas percolation dans le réseau~$\mathbb{Z}^2$ avec le paramètre~$1/2$. Plus tard en~1980, Harry Kesten démontre dans~\cite{kesten} que le le point critique de ce même réseau est plus petit que~$1/2$ ce qui démontre alors~$p_c=1/2$ et l'absence de percolation au point critique.
+	Il s'agit donc d'étudier les Jacobiennes des graphes tirés selon la distribution d'Erd\H{o}s-Rényi. Soient~$n$ un entier non nul et~$q$\marginnote{$n,q$} un réel strictement compris entre~$0$ et~$1$,un graphe~$\Gamma$ est tiré selon la distribution d'Erd\H{o}s-Rényi lorsque pour toute paire de sommets de~$\Gamma$ forme une arrête avec probabilité~$q$, indépendamment des autres arrêtes dans le graphe ; on notera alors~$\Gamma\in G(n,q)$\marginnote{$G(n,q)$} pour dire que~$\Gamma$ a été tiré selon cette distribution.
 	
-	En 1994 les mathématiciens Takashi Hara et Gordon Slade démontrent dans~\cite{mean} qu'il n'y a pas percolation au point critique dans~$\mathbb{Z}^n$ pour~$n\geq 19$. Bien que l'on suspecte que le résultat soit vrai pour tout entier~$n$ plus grand que~$2$, le problème s'avère difficile, et montrer l'absence de percolation au point critique dans le réseau cubique~$\mathbb{Z}^3$ reste un enjeu majeur de la recherche actuelle.
+	Dans la suite de cet exposé, et pour alléger les notations, on écrira~$[n]$\marginnote{$[n]$} pour désigner l'ensemble~$\{1,2,...,n\}$ des~$n$ premiers entiers naturels non nuls.
 	
-	Dans cet exposé, on s'intéresse aux \emph{tranches} du réseau cubique, à savoir les réseaux de la forme~$\mathbb{Z}^2\times\{0,...,k\}$. Par la suite, un tel réseau sera noté~$\Sk$. \marginnote{$\Sk$}
-	Dans la suite, si~$p$ est un réel compris entre~$0$ et~$1$ on notera~$\PpSP$ \marginnote{$\PpSP$} la probabilité associée au modèle de percolation sur~$\Sk$ obtenu à partir de la loi Bernoulli de paramètre~$p$ sur les arrêtes. Si~$B$ est une partie de~$\mathbb{Z}^2$, on notera~$\overline{B}$ \marginnote{$\overline{B}$} le cylindre de base~$B$ donné par~$\overline{B}=B\times\{0,...,k\}$. 	
-	Enfin, si~$B, X$ et~$Y$ sont trois sous-ensembles de~$\mathbb{Z}^2$ tels que~$X,Y\subset B$, alors on définit les deux événements suivants :
-	\begin{itemize}
-		\item[] $\relie[B]{X}{Y}$ \marginnote{$\relie[B]{X}{Y}$} : \og{} il existe un cluster ouvert dans $\overline{B}$ reliant $\overline{X}$ et $\overline{Y}$  \fg{}
-		\item[] $\relie*[B]{X}{Y}$ \marginnote{$\relie*[B]{X}{Y}$} :  \og{} il existe un \emph{unique} cluster ouvert dans $\overline{B}$ reliant $\overline{X}$ et $\overline{Y}$  \fg{}
-	\end{itemize}
-	
+	Si~$\Gamma$ est un graphe, on rappelle qu'on peut lui associer son \emph{Laplacien}~$L_\Gamma$ \marginnote{$L_\Gamma$}, la matrice de taille~$n\times n$ à coefficients dans~$\mathbb{Z}$ et donnée par :
+	\[
+		\forall i,j\in[n], L_\Gamma(i,j) = 
+			\begin{cases}
+				1 &\text{lorsque }\{i,j\}\text{ est une arrête de }\Gamma \\
+				-1 &\text{si }i=j\\
+				0 &\text{sinon}
+			\end{cases}
+	\]
+	Si on note~$\Zzero$\marginnote{$\Zzero$} l'ensemble des vecteurs de~$\mathbb{Z}^n$ dont la somme des coordonnées est nulle, alors on a clairement que~$\Im(L_\Gamma) \subset \Zzero$. On définit alors la \emph{Jacobienne} de~$\Gamma$ comme étant le groupe~$S_\Gamma$ donné par :
+	\[
+		S_\Gamma = \quotient{\Zzero}{\Im(L_\Gamma)}.\text{\marginnote{$S_\Gamma$}}
+	\]

@@ -1,13 +1,13 @@
 \section{Prémices d'algèbre}
 	Introduction [TODO]
 	
-	Dans le reste de cette section, on fixera~$G$ \marginnote{$G$} un groupe abélien fini, et~$n$ un entier naturel non nul.
+	Dans le reste de cette section, on fixera~$G$ \marginnote{$G,n$} un groupe abélien fini.
 	
 	Soient~$F: V \rightarrow G$ et~$C : V \rightarrow G^*$ deux homomorphismes, on définit les homomorphismes~$\phiCF : V \rightarrow G^* \oplus G$ et~$\phiFC : V \rightarrow G \oplus G^*$ en posant pour tout vecteur~$v$ de~$V$ :~$\phiCF(v) = (C(v),F(v))$ et~$\phiFC(v) = (F(v),C(v))$\marginnote{$\phiCF, \phiFC$}.
 	
 	Soient maintenant~$\gamma$ un réel tel que~$0<\gamma<1$ et~$F : V \rightarrow G$ un homomorphisme. On dit qu'un homomorphisme~$C : V \rightarrow G^*$ est $\gamma$-\emph{robuste}\marginnote{robuste} pour~$F$ lorsque que pour tout~$\sigma \subset [n]$ de cardinal~$\#\sigma < \gamma n$ on a~$\ker(\phiFC\restr{\Vsig}) \neq \ker(F\restr{\Vsig})$. Dans le cas contraire, on dit que~$C$ est~$\gamma$-\emph{faible}\marginnote{faible} pour~$F$. S'il n'y a pas d'ambiguïté on dira simplement \emph{robuste} ou \emph{faible}.
 	
-	\begin{lem}[Estimation de la quantité d'homomorphismes faibles]\label{lem:3.1}
+	\begin{lem}[Quantité d'homomorphismes faibles]\label{lem:3.1}
 		Il existe une constante~$C_G$, qui ne dépend que de~$G$ et telle que : pour tout entier~$n$, pour tout réel~$\gamma$ strictement compris entre~$0$ et~$1$, et pour tout homomorphisme~$F : V \rightarrow G$ on ait :
 		\[
 			\#\{C\in\Hom(H,G^*), C\text{ faible pour}F\}
