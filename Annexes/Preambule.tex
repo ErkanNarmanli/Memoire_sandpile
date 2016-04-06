@@ -138,6 +138,11 @@
 \DeclareMathOperator{\Li}{Li}
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\Image}{Im}
+\DeclareMathOperator{\Jac}{Jac}
+\DeclareMathOperator{\Princ}{Princ}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Div}{Div}
+\DeclareMathOperator{\Aut}{Aut}
 %Sans-arguments-------------------------------------------------------------------------------------
 \newcommand{\Zzero}{\mathbb{Z}^{0,n}}
 \newcommand{\phiCF}{\phi_{C,F}}
@@ -153,7 +158,8 @@
 \newcommand{\im}{\mathfrak{Im}}  							%Partie imaginaire
 \newcommand{\Pre}{\mathscr{P}}								%Ensemble des nombres premiers
 %--
-\makeatletter														
+\makeatletter									
+\newcommand{\scalaire}[2]{\left<#1\,|\,#2\right>}					
 \newsavebox{\@brx}									%On définit les fonctions
 \newcommand{\llangle}[1][]{\savebox{\@brx}{\(\m@th{#1\langle}\)}	%\rrangle et \llangle
   \mathopen{\copy\@brx\mkern2mu\kern-0.9\wd\@brx\usebox{\@brx}}}	%
@@ -230,6 +236,7 @@
 	\newtheorem{lem}[defi]{Lemme}
 	\newtheorem{coro}[defi]{Corollaire}
 	\newtheorem*{conj}{Conjecture}
+	\newtheorem*{heur}{Heuristique}
 \theoremstyle{remark}
 	\newtheorem*{rem}{Remarque}
 	\newtheorem*{voca}{Vocabulaire}

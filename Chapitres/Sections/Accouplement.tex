@@ -1,1 +1,38 @@
 \section{Accouplements de dualité}
+	Soient~$D_1$ un diviseur de de~$G$ de degré nul. Puisque~$\Jac(G)$ est un groupe d'ordre fini, alors il existe~$m_1$ un entier positif non nul tel que la classe~$\overline{D_1}$ de~$D_1$ dans~$\Jac(G)$ vérifie~$m_1 \overline{D_1}=\overline{0}$ ; c'est à dire~$m_1 D_1 \in \Princ(G)$. Ainsi on prend~$m_1, m_2$ des entiers tels que :
+	\begin{align*}
+		m_1 D_1 &= \ord(f_1)\\
+		m_2 D_2 &= \ord(f_2),
+	\end{align*}
+	où~$f_1, f_2$ sont deux applications méromorphes sur~$G$. Avec ces notations, on définit ensuite l'application~$\scalaire{\,\cdot\,}{\,\cdot\,} :\Div^0(G)\times\Div^0(G) \rightarrow \mathbb{Q}$ et donnée par :
+	\[
+		\scalaire{D_1}{D_2} = \frac{1}{m_2} \sum_{v\in V}D_1(v) f_2(v).	\text{\marginnote{$\scalaire{\,\cdot\,}{\,\cdot\,}$}}
+	\]
+	\begin{rem}
+		L'application~$\scalaire{\,\cdot\,}{\,\cdot\,}$ est symétrique et bilinéaire. Le caractère bilinéaire est clair, pour démontrer que caractère symétrique il suffit de remplacer~$D_1(v)$ par~$\div(f_1)/m_1$ dans la définition plus haut, puis de mettre ensemble les deux contributions des~$u,v$ voisins, ce qui nous donne une expression clairement symétrique en~$f_1,f_2$.
+	\end{rem}
+	\begin{rem}
+		On remarque par ailleurs que si~$D_1$ (ou~$D_1$) est dans~$\Princ(G)$, alors~$m_1$ (ou~$m_2$) vaut~$1$ et donc~$\scalaire{D_1}{D_2}$ est dans~$\mathbb{Z}$. On peut donc passer au quotient, ce qui nous permet de définir :
+		\[
+			\delta_G : \Jac(G)\times\Jac(G) \rightarrow \quotient{\mathbb{Q}}{\mathbb{Z}}, \text{\marginnote{$\delta_G$}}
+		\]
+		comme quotient de~$\scalaire{\,\cdot\,}{\,\cdot\,}$. On appelle~$\delta_G$ l'\emph{accouplement canonique} associé à~$G$.
+	\end{rem}
+	\begin{defi}
+		Une application~$\delta : \Gamma\times\Gamma \rightarrow \mathbb{Q}/\mathbb{Z}$ est dite \emph{parfaite} \marginnote{app. parfaite} lorsque pour tout~$x$ dans~$\Gamma$ on a : pour tout~$y$ dans~$\Gamma, \delta(x,y) = 0$ si et seulement si~$x = 0$.
+		
+		On dit que~$\delta$ est un \emph{accouplement} \marginnote{accouplement} lorsque que~$\delta$ est symétrique, bilinéaire, et parfaite.
+	\end{defi}
+	\begin{prop}
+		L'application~$\delta_G$ est un accouplement.
+	\end{prop}
+	\begin{dem}
+		[TODO]
+	\end{dem}
+	Aussi, plutôt que de travailler simplement avec~$\Jac(G)$, on préfère travailler avec le couple~$(\Jac(G),\delta_G)$ parce que la répartition est pus facile à étudier ainsi. Ceci nous amène donc à poser :
+	\[
+		A = \{(\Gamma,\delta), \Gamma\text{ abélien fini}, \delta\text{ accouplement}\}.\text{\marginnote{$A$}}
+	\]
+	Par la suite on dit que deux couples~$(\Gamma,\delta)$ et~$(\Gamma',\delta')$ sont équivalents lorsque :~$\Gamma$ et~$\Gamma'$ sont isomorphes et qu'il existe un isomorphisme~$f$ entre~$\Gamma'$ et~$\Gamma$ qui préserve l'accouplement, à savoir que pour tout~$x,y$ dans~$\Gamma'$, on a~$\delta(f(x),f(y)) = \delta'(x,y)$. Dans le cas où~$\delta = \delta'$, on notera~$\Aut(\Gamma,\delta)$\marginnote{$\Aut(\Gamma,\delta)$} l'ensembles des tels~$f$.
+	
+	On note~$\sim$ cette relation d'équivalence. On pose alors~$\mathscr{A} = \quotient{A}{\sim}$\marginnote{$\sim, \mathscr{A}$} l'ensemble quotient induit par~$\sim$. On pose également~$\mathscr{A}(m)$ \marginnote{$\mathscr{A}(m)$} l'ensemble des éléments~$(\Gamma,\delta)$ de~$\mathscr{A}$ tels que~$\Gamma$ soit de cardinal~$m$.

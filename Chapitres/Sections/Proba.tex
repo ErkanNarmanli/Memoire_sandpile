@@ -1,0 +1,30 @@
+\section{Quelques lois de probabilité}
+	On fixe dans le reste de cet exposé~$q$ un réel strictement compris entre~$0$ et~$1$. On notera~$\tilde{\mu}_n$\marginnote{$\tilde{\mu}_n$} la loi des graphes d'Erd\H{o}s-Rényi sur l'ensemble des graphes à~$n$ sommets. On a donc
+	\[
+		\tilde{\mu}_n(G) = q^{e(G)}(1-q)^{\binom{n}{2}-e(G)},
+	\]
+	où~$e(G)$ désigne le nombre d'arrêtes de~$G$. On pose alors~$J:G(n,q)\rightarrow \mathscr{A}$ l'application qui à tout graphe~$G$ associe le couple~$(\Jac(G),\delta_G)$. On pose enfin~$\mu_n = \tilde{\mu}_n \circ J^{-1}$\marginnote{$\mu_n$} la mesure image de~$\tilde{\mu}_n$ par~$J$.
+	\begin{heur}
+		On à l'heuristique suivant :~$\displaystyle\Pro((\Jac(G),\delta_G)=(\Gamma,\delta) \propto \frac{1}{\#\Gamma\#\Aut(\Gamma,\delta)}\cdot$
+	\end{heur}
+	Ceci nous amène alors définir la mesure~$\eta_n$ sur~$\mathscr{A}(1)\sqcup ...\sqcup \mathscr{A}(n)$ selon cet heuristique, on pose pour tout~$(\Gamma,\delta)$ dans~$\mathscr{A}$ tel que~$\#\Gamma \leq n$ :
+	\[
+		\eta_n(\Gamma,\delta) \propto\frac{1}{\#\Gamma\#\Aut(\Gamma,\delta)}\cdot
+		\text{\marginnote{$\eta_n$}}
+	\]
+	Cela est possible puisque l'on est sur un ensemble fini. Le but est donc maintenant de comparer~$\eta_n$ et~$\mu_n$ asymptotiquement, au sens suivant. Soient~$\suite{\alpha},\suite{\beta}$ une suite de mesures sur un ensemble mesurable~$(E,\mathcal{E})$, on dit que les deux suites sont \emph{faiblement équivalentes}\marginnote{éq. faible} lorsque pour toute fonction~$F : E\rightarrow\mathbb{R}$ bornée et~$\mathcal{E}$-mesurable les deux propriétés suivantes sont vérifiées :
+	\begin{enumerate}
+		\item On a :~$\int F\,\mathrm{d}\alpha_n$ converge si et seulement si~$\int F\,\mathrm{d}\beta_n$ converge ;
+		\item Si ces intégrales convergent, alors elles ont la même limite.
+	\end{enumerate}
+	 On a alors la conjecture suivante :
+	\begin{conj}
+		Les suites~$\mu_n$ et~$\eta_n$ sont faiblement équivalentes.
+	\end{conj}
+	Pour notre part, nous allons restreindre notre étude au cas où~$\Gamma$ est un~$p$-groupe et donc regarder le~$p$-Sylow de la Jacobienne. D'une part cela nous permet d'étudier des objets plus simples, et d'autre part cela nous fournit toujours beaucoup d'information puisque les~$p$-Sylow déterminent uniquement la Jacobienne. Cela nous amène donc à poser :
+	\[
+		\mathscr{A}_p = \bigsqcup_{n\in\mathbb{N}} \mathscr{A}(n)
+			= \{(\Gamma,\delta), \exists n\in\mathbb{N},\#\Gamma = p^n\}.
+			\text{\marginnote{$\mathscr{A}_p$}}
+	\]
+	
