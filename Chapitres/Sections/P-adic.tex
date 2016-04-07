@@ -1,0 +1,29 @@
+\section{Matrices symétriques p-adiques}
+\subsection{Du laplacien aux matrices symétriques}
+
+Remarquons tout d'abord que l'on a pour un graphe G :
+\[ \Div(G) = \mathbb{Z} \oplus \Div^0(G) \]
+
+En quotientant par $\Im(L_G) \simeq \Princ(G)$, on obtient : 
+\[ \quotient{\mathbb{Z}^n}{\Im(L_G)} = \mathbb{Z} \oplus \Jac(G) \]
+
+Ceci nous amène à la définition suivante : 
+\begin{defi}
+Soit $R$ un anneau principal intègre, et~$A\in\mathcal{M}_n(R)$ une matrice quelconque.
+On définit alors le conoyau de $A$ comme : 
+\[\Cok(A) = \quotient{R^n}{\Im(A)} \text{\marginnote{$\Cok(A)$}}\cdot\]
+\end{defi}
+
+\begin{rem}
+\'Etant donné que $R$ est principal, $A$ possède une forme normale de Smith de la forme :
+\[ A \sim \text{Diag}(a_1,\dots,a_n) \]
+Si $A$ est de rang $n$, les $a_i$ sont non nuls donc 
+\[\Cok(A) = \bigoplus_{i=1}^n{\quotient{R}{a_iR}}\]
+\end{rem}
+
+Afin de poursuivre l'analogie avec le laplacien, il nous faut définir un accouplement canonique associé à une matrice symétrique~$A$ quelconque. Pour cela, il nous faut supposer que~$A$ est inversible dans~$K = \Frac(R)$, ie que~$\det(A)\neq0$.
+\begin{defi}
+Soit $A$ une matrice de~$\mathcal{M}_n(R)$ non singulière (ie telle que~$\det(A)\neq 0$).
+On peut alors définir un accouplement de $R\times R$ dans $\quotient{K}{R}$ défini par :
+\[ \forall x,y\in R\quad \left<x,y\right>_{\!A} = {}^txA^{-1}y \text{\marginnote{$\left<\cdot,\cdot\right>_{\!A}$}}\]
+\end{defi}
