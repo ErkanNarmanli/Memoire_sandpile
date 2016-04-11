@@ -1,9 +1,7 @@
 \section{Matrices symétriques p-adiques}
 \subsection{Du laplacien aux matrices symétriques}
 
-Remarquons tout d'abord que l'on a pour un graphe G :
-\[ \Div(G) = \mathbb{Z} \oplus \Div^0(G) \]
-
+Remarquons tout d'abord que l'on a pour un graphe G, $\Div(G) = \mathbb{Z} \oplus \Div^0(G)$.\\[0.2cm]
 En quotientant par $\Im(L_G) \simeq \Princ(G)$, on obtient : 
 \[ \quotient{\mathbb{Z}^n}{\Im(L_G)} = \mathbb{Z} \oplus \Jac(G) \]
 
@@ -23,7 +21,39 @@ Si $A$ est de rang $n$, les $a_i$ sont non nuls donc
 
 Afin de poursuivre l'analogie avec le laplacien, il nous faut définir un accouplement canonique associé à une matrice symétrique~$A$ quelconque. Pour cela, il nous faut supposer que~$A$ est inversible dans~$K = \Frac(R)$, ie que~$\det(A)\neq0$.
 \begin{defi}
-Soit $A$ une matrice de~$\mathcal{M}_n(R)$ non singulière (ie telle que~$\det(A)\neq 0$).
+Soit~$A$ une matrice de~$\mathcal{M}_n(R)$ non singulière (ie telle que~$\det(A)\neq 0$).
 On peut alors définir un accouplement de $R\times R$ dans $\quotient{K}{R}$ défini par :
 \[ \forall x,y\in R\quad \left<x,y\right>_{\!A} = {}^txA^{-1}y \text{\marginnote{$\left<\cdot,\cdot\right>_{\!A}$}}\]
+Cet accouplement induit un accouplement parfait~$\delta_A : \Cok(A)\times\Cok(A) \mapsto K/R$\marginnote{$\delta_A$}.
 \end{defi}
+
+On dispose maintenant pour toute matrice d'un couple~$(\Cok(A), \delta_A)$ ; il nous reste maintenant à nous placer dans un anneau tel que~$\Cok(A)$ soit un~$p$-groupe.
+
+\subsection{Entiers $p$-adiques}
+
+\begin{defi}
+Soientt~$(I, \leq)$, un ensemble ordonné,~$(E_i)_{i\in I}$ une famille d'anneaux, et pour~$i\leq j$, un morphisme $f_i^j : E_j \to E_i$ tels que :
+\begin{itemize}
+\item $\forall i\in I, f_i^i = \text{Id}_{E_i}$
+\item $\forall (i,j,k)\in I, i\leq j\leq k, f_i^j \circ f_j^k = f_i^k$.
+\end{itemize}
+On définit alors la limite projective de $(E_i)_{i\in I}$ :
+\[ \varprojlim{E_i} = \{(a_i)_{i\in I}\in \prod_{i\in I}{E_i}\quad |\quad\forall i\leq j,\ \  f_i^j(a_j) = a_i \} \text{\marginnote{$\varprojlim$}} \]
+
+Cette limite est munie des lois induites par chaque $E_i$ : $(a_i) + (b_i) = (a_i +_i b_i)$
+\end{defi}
+
+On choisit maintenant~$I = \mathbb N$, $E_n = \quotient{\mathbb{Z}}{p^n \mathbb Z}$ et~$f_n^m$ la projection canonique.\\[0.2cm]
+On note alors~$\Zp = \varprojlim{\quotient{\mathbb Z}{p^n\mathbb Z}}$ la limite projective de cette suite. \marginnote{$\Zp$}
+
+\begin{rem}
+On peut identifier $\Zp$ à un anneau de sommes formelles :
+\[ \Zp \simeq \{ \sum_{i=0}^\infty{b_i\,p^i}\   |\  b_i\in\llbracket0, p-1 \rrbracket\} \]
+Cette identification se fait via les applications~$a_i = \overline{\strut b_0+\dots+b_{i-1}p^{i-1}}$ et~$b_i = \frac{a_{i+1}-a_i}{\strut p^i}$.\\
+\end{rem}
+
+Dans ce qui suit, on notera $\text{Sym}_n(R)$\marginnote{$\Sym_n(R)$} l'ensemble des matrices symétriques à coefficients dans un anneau $R$.\\
+Soit $A \in \Sym_n(\Zp)$ inversible ; $\Zp$ est principal donc d'après ce qui précède il existe~$a_1, \dots a_r$ tels que $\Cok(A) \simeq \bigoplus_{i=1}^r{\quotient{\Zp}{a_i\Zp}}$.\\[0.2cm]
+Or on peut écrire $a_i = p^{d_i}u_i$ avec $u_i$ inversible ; de plus on a $\quotient{\Zp}{p^{d_i}\Zp} \simeq \quotient{\mathbb Z}{p^{d_i}\mathbb Z}$ d'où :
+\[ \Cok(A) \simeq \bigoplus_{i=1}^r \quotient{\mathbb Z}{p^{d_i}\mathbb Z} \]
+Ainsi, $\Cok(A)$ est un $p$-groupe.
