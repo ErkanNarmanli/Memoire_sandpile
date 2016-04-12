@@ -176,6 +176,22 @@
 	%Pour recréer un \cleardoublepage qui marche aussi en oneside
 %Avec-arguments-------------------------------------------------------------------------------------
 \makeatletter
+\newcommand\coord[2]{\begin{pmatrix}
+		#1 \\
+		#2 
+	\end{pmatrix}}
+	\newcommand\cooord[3]{\begin{pmatrix}
+			#1 \\
+			#2 \\
+			#3
+		\end{pmatrix}}
+		\newcommand\coooord[4]{\begin{pmatrix}
+				#1 \\
+				#2 \\
+				#3 \\
+				#4
+			\end{pmatrix}}
+
 \newcommand*{\quotient}[2]%
 {\ensuremath{%
 		#1/\!\raisebox{-.65ex}{\ensuremath{\, #2}}}}

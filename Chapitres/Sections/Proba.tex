@@ -27,4 +27,13 @@
 			= \{(\Gamma,\delta), \exists n\in\mathbb{N},\#\Gamma = p^n\}.
 			\text{\marginnote{$\mathscr{A}_p$}}
 	\]
+	Par la suite, si~$\Gamma$ est un groupe abélien fini, on notera~$\Gamma_p$ son~$p$-Sylow. On défini alors l'application ~$\alpha_p : \mathscr{A} \rightarrow\mathscr{A}_p$\marginnote{$\alpha_p$} qui associe à tout couple~$(\Gamma,\delta)$ de~$\mathscr{A}$ son image~$(\Gamma_p,\delta\restr{\Gamma_p})$. Cela nous amène alors à présenter une seconde conjecture :
+	\begin{conj}
+		La suite de mesures~$\mu_n\circ\alpha_p^{-1}$ converge faiblement vers une mesure~$\check{\eta}$, où~$\check{\eta}(\Gamma_p,\delta)$ est proportionnel à~$(\#\Gamma_p\#\Aut(\Gamma_p,\delta))^{-1}$.
+	\end{conj}
+	Dans son article \emph{The distribution of sandpile groups of random graphs} \cite{main},  Mélanie Matchett Wood montre un résultat similaire, en oubliant la notion d'accouplement. Elle montre le théorème suivant pour tout~$p$-groupe~$\Gamma-p$ :
+	\begin{thm}
+		On a~$\displaystyle \Pro((\Jac(G))_p\simeq \Gamma_p) \propto \frac{\#\{\text{accouplements }\Gamma_p\times \Gamma_p\rightarrow \Gamma_p\}}{\#\Gamma_p \cdot \#\Aut(\Gamma_p)} \cdot$
+	\end{thm}
+	Pour note part, nous allons nous intéresser à montrer un résultat de cette forme, non pas pour le cas de jacobienne (donc de conoyau de laplacien), mais dans le cas plus général des conoyaux de matrices symétriques. On travaillera sur des matrices à coefficients dans les \emph{nombres}~$p$-\emph{adiques}. Dans la sections suivantes nous allons voir quelques propriétés de tels objets.
 	
