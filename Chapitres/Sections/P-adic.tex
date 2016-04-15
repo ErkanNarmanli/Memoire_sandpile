@@ -1,10 +1,10 @@
 \section{Matrices symétriques p-adiques}
 \subsection{Du laplacien aux matrices symétriques}
 
-Remarquons tout d'abord que l'on a pour un graphe G, $\Div(G) = \mathbb{Z} \oplus \Div^0(G)$.\\[0.2cm]
-En quotientant par $\Im(L_G) \simeq \Princ(G)$, on obtient : 
-\[ \quotient{\mathbb{Z}^n}{\Im(L_G)} = \mathbb{Z} \oplus \Jac(G) \]
-
+Remarquons tout d'abord que l'on a pour un graphe G, $\Div(G) = \mathbb{Z} \oplus \Div^0(G)$. En quotientant par $\Im(L_G) \simeq \Princ(G)$, on obtient : 
+\[ 
+	\quotient{\mathbb{Z}^n}{\Im(L_G)} = \mathbb{Z} \oplus \Jac(G) 
+\]
 Ceci nous amène à la définition suivante : 
 \begin{defi}
 Soit $R$ un anneau principal intègre, et~$A\in\mathcal{M}_n(R)$ une matrice quelconque.
@@ -13,8 +13,7 @@ On définit alors le conoyau de $A$ comme :
 \end{defi}
 
 \begin{rem}
-\'Etant donné que $R$ est principal, $A$ possède une forme normale de Smith de la forme $A \sim \text{Diag}(a_1,\dots,a_n)$.\\
-Si $A$ est de rang $n$, les $a_i$ sont non nuls donc 
+\'Etant donné que $R$ est principal, $A$ possède une forme normale de Smith de la forme $A \sim \text{Diag}(a_1,\dots,a_n)$. Si $A$ est de rang $n$, les $a_i$ sont non nuls donc 
 \[\Cok(A) = \bigoplus_{i=1}^n{\quotient{R}{a_iR}}\]
 \end{rem}
 
@@ -38,26 +37,24 @@ Soientt~$(I, \leq)$, un ensemble ordonné,~$(E_i)_{i\in I}$ une famille d'anneau
 \end{itemize}
 On définit alors la limite projective de $(E_i)_{i\in I}$ :
 \[ \varprojlim{E_i} = \{(a_i)_{i\in I}\in \prod_{i\in I}{E_i}\quad |\quad\forall i\leq j,\ \  f_i^j(a_j) = a_i \} \text{\marginnote{$\varprojlim$}} \]
-
-Cette limite est munie des lois induites par chaque $E_i$ : $(a_i) + (b_i) = (a_i +_i b_i)$
+Cette limite est munie des lois induites par chaque $E_i$ : $(a_i) + (b_i) = (a_i +_i b_i)$.
 \end{defi}
 
-On choisit maintenant~$I = \mathbb N$, $E_n = \quotient{\mathbb{Z}}{p^n \mathbb Z}$ et~$f_n^m$ la projection canonique.\\[0.2cm]
-On note alors~$\Zp = \varprojlim{\quotient{\mathbb Z}{p^n\mathbb Z}}$ la limite projective de cette suite. \marginnote{$\Zp$}
+On choisit maintenant~$I = \mathbb N$, $E_n = \quotient{\mathbb{Z}}{p^n \mathbb Z}$ et~$f_n^m$ la projection canonique. On note alors~$\Zp = \varprojlim{\quotient{\mathbb Z}{p^n\mathbb Z}}$ la limite projective de cette suite. \marginnote{$\Zp$}
 
 \begin{rem}
 On peut identifier $\Zp$ à un anneau de sommes formelles :
 \[ \Zp \simeq \{ \sum_{i=0}^\infty{b_i\,p^i}\   |\  b_i\in\llbracket0, p-1 \rrbracket\} \]
-Cette identification se fait via les applications~$a_i = \overline{\strut b_0+\dots+b_{i-1}p^{i-1}}$ et~$b_i = \frac{a_{i+1}-a_i}{\strut p^i}$.\\
+Cette identification se fait via les applications~$a_i = \overline{\strut b_0+\dots+b_{i-1}p^{i-1}}$ et~$b_i = \frac{a_{i+1}-a_i}{\strut p^i}$.
 \end{rem}
 
-Dans ce qui suit, on notera $\text{Sym}_n(R)$\marginnote{$\Sym_n(R)$} l'ensemble des matrices symétriques à coefficients dans un anneau $R$.\\
-Soit $A \in \Sym_n(\Zp)$ inversible ; $\Zp$ est principal donc d'après ce qui précède il existe~$a_1, \dots a_r$ tels que $\Cok(A) \simeq \bigoplus_{i=1}^r{\quotient{\Zp}{a_i\Zp}}$.\\[0.2cm]
+Dans ce qui suit, on notera $\text{Sym}_n(R)$\marginnote{$\Sym_n(R)$} l'ensemble des matrices symétriques à coefficients dans un anneau $R$.
+Soit $A \in \Sym_n(\Zp)$ inversible ; $\Zp$ est principal donc d'après ce qui précède il existe~$a_1, \dots a_r$ tels que $\Cok(A) \simeq \bigoplus_{i=1}^r{\quotient{\Zp}{a_i\Zp}}$.
 Or on peut écrire~$a_i = p^{d_i}u_i$ avec~$u_i$ inversible ; de plus on a~$\quotient{\Zp}{p^{d_i}\Zp} \simeq \quotient{\mathbb Z}{p^{d_i}\mathbb Z}$ d'où :
 \[ \Cok(A) \simeq \bigoplus_{i=1}^r \quotient{\mathbb Z}{p^{d_i}\mathbb Z} \]
 Ainsi,~$\Cok(A)$ est un~$p$-groupe.
 
-Il nous reste à définir une mesure sur $\Zp$ ; on utilise la mesure de Haar~$h_p$ définie par~$h_p(a+p^n\Zp) = p^{-n}$ pour tout $a\in\Zp$.\\
+Il nous reste à définir une mesure sur $\Zp$ ; on utilise la mesure de Haar~$h_p$ définie par~$h_p(a+p^n\Zp) = p^{-n}$ pour tout $a\in\Zp$.
 Cette mesure est bien une probabilité (car~$\Zp = 0+p^0\Zp$) et est invariante par translation : pour tout~$E$ mesurable,~$a\in\Zp$,~$h_p(a+E)=h_p(E)$.
 
-On définit alors une mesure $H_{n,p}$ sur $\Sym_n(\Zp)$ en chiosissant chacun des $\frac{n(n+1)}2$ coefficients indépendamment.
+On définit alors une mesure $H_{n,p}$ sur $\Sym_n(\Zp)$ en choisissant chacun des $\frac{n(n+1)}2$ coefficients indépendamment.
