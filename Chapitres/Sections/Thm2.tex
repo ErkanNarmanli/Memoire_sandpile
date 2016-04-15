@@ -19,8 +19,8 @@ Soient~$A,M\in\Sym_n(\Zp)$ inversibles.\\ Alors~$\left<\,\cdot\,,\,\cdot\,\right
 \end{enumerate}
 \end{lem}
 
-\begin{dem}
-D'après la définition de~$\left<\,\cdot\,,\,\cdot\,\right>_{\!A}$ il est clair que les accouplements sont égaux si et seulement si~$A^{-1} - M^{-1} \in \mathcal{M}_n(\Zp)$.\\
+La démonstration de ce lemme provient de \cite{lemma}, lemme 3.2.
+\begin{dem} D'après la définition de~$\left<\,\cdot\,,\,\cdot\,\right>_{\!A}$ il est clair que les accouplements sont égaux si et seulement si~$A^{-1} - M^{-1} \in \mathcal{M}_n(\Zp)$.\\
 Supposons tout d'abord que ce soit le cas, et posons~$N = A^{-1} - M^{-1}$. Alors~$A^{-1}M = NM+I_n$ est dans~$\mathcal M_n(\Zp)$, et de même pour~$M^{-1}A$. \\
 Ainsi~$MA^{-1}\in \GL_n(\Zp)$ donc~$\bar M\bar A^{-1}\in \GL_n(\mathbb F_p)$ ; on en déduit que~$\rg(\bar A) = \rg(\bar M)$.\\
 Enfin,~$A = M+ANM = M + M(M^{-1}AN)M$, ce qui conclut.
@@ -63,7 +63,7 @@ et le lemme s'en déduit.
 Soit~$A$ une matrice aléatoire tirée selon la mesure de Haar ; on peut supposer~$A$ non singulière. On remarque alors que~$\Cok(\left<\,\cdot\,,\,\cdot\,\right>_{\!A}) = \Cok(A)$, donc nous allons nous intéresser aux applications bilinéaires étudiées plus haut.\\
 On a calculé jusqu'ici le nombre d'applications bilinéaires dont le quotient est isomorphe à~$(\Gamma, \delta)$ ; il nous reste donc à déterminer la probabilité que $\left<\,\cdot\,,\,\cdot\,\right>_{\!A}$ soit isomorphe à~$[\,,\,]$ fixé, tel que~$\Cok([\,,\,])$ est isomorphe à $(\Gamma,\delta)$. Remarquons que la mesure de Haar sur~$\Zp$ étant invariante par translation,~$H_n,p$ est invariante par changement de base.
 
-Supposons~$p$ impair ; soit $N$ une matrice de~$\mathcal{M}_n(\mathbb Q_p)$ telle que~$N_{i,j}$ soit un relèvement de~$[e_i, e_j]$ dans~$\mathbb Q_p$. La classification des formes quadratiques sur~$\mathbb{Q}_p$ nous donne l'existence de~$H\in\mathcal M_n(\Zp)$ telle que~${}^tHNH$ soit diagonale. Par invariance de la mesure de Haar, on peut donc directement supposer que~$N$ est diagonale, et poser~$M = N^{-1}$.
+Supposons~$p$ impair ; soit $N$ une matrice de~$\mathcal{M}_n(\mathbb Q_p)$ telle que~$N_{i,j}$ soit un relèvement de~$[e_i, e_j]$ dans~$\mathbb Q_p$. La classification des formes quadratiques (voir par exemple \cite{quad}, section 15.4.4) sur~$\mathbb{Q}_p$ nous donne l'existence de~$H\in\mathcal M_n(\Zp)$ telle que~${}^tHNH$ soit diagonale. Par invariance de la mesure de Haar, on peut donc directement supposer que~$N$ est diagonale, et poser~$M = N^{-1}$.
 
 Quitte à changer le relèvement, on peut supposer que les coefficients de~$N$ ont une valuation $p$-adique négative, donc~$M$ a ses coefficients dans~$\Zp$, qu'on note~$p^{d_1}u_1, \dots, p^{d_n}u_n$ avec~$u_i$ inversible. Dès lors,
 \[ \Gamma = \bigoplus_{i=1}^{n}\quotient{\Zp}{p^{d_i}\Zp} \]
@@ -75,7 +75,7 @@ La deuxième condition donne pour~$i<j$,~$p^{d_i+d_j} | a_{i,j}$ et~$p^{2d_i} | 
 
 On remarque que selon ces conditions,~$\bar A$ est nulle en dehors du mineur en haut à gauche de taille~$n-r$, qui est indépendant des coefficients déterminés précédemment. Or~$\rg(\bar M) = n-r$ donc ce mineur doit être inversible ; il est distribué uniformément dans $\Sym_{n-r}(\mathbb F_p)$ donc la probabilité qu'il soit inversible est
 \[ \frac{|\GL_{n-r}(\mathbb F_p)\cap \Sym_{n-r}(\mathbb F_p)|}{|\Sym_{n-r}(\mathbb F_p)|}= \prod_{i=1}^{\entierSup{(n-r)/2}}{(1-p^{1-2i})} \]
-La dernière égalité provient de [TODO].
+La dernière égalité provient de \cite{sym}, théorème 2.
 
 Ainsi, étant donné que la probabilité ne dépend pas de~$M$, on a finalement en multipliant :
 \[ H_{n,p}\left[(\Cok(A),\delta_A) \simeq (\Gamma,\delta)\right] = \frac{\prod_{j=n-r+1}^{n}{(1-p^{-j})}\prod_{i=1}^{\entierSup{(n-r)/2}}{(1-p^{1-2i})}}{|\Gamma|\cdot|\Aut(\Gamma,\delta)|} \]
