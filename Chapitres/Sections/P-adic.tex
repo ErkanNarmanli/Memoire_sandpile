@@ -13,8 +13,7 @@ On définit alors le conoyau de $A$ comme :
 \end{defi}
 
 \begin{rem}
-\'Etant donné que $R$ est principal, $A$ possède une forme normale de Smith de la forme :
-\[ A \sim \text{Diag}(a_1,\dots,a_n) \]
+\'Etant donné que $R$ est principal, $A$ possède une forme normale de Smith de la forme $A \sim \text{Diag}(a_1,\dots,a_n)$.\\
 Si $A$ est de rang $n$, les $a_i$ sont non nuls donc 
 \[\Cok(A) = \bigoplus_{i=1}^n{\quotient{R}{a_iR}}\]
 \end{rem}
@@ -23,7 +22,7 @@ Afin de poursuivre l'analogie avec le laplacien, il nous faut définir un accoup
 \begin{defi}
 Soit~$A$ une matrice de~$\mathcal{M}_n(R)$ non singulière (ie telle que~$\det(A)\neq 0$).
 On peut alors définir un accouplement de $R\times R$ dans $\quotient{K}{R}$ défini par :
-\[ \forall x,y\in R\quad \left<x,y\right>_{\!A} = {}^txA^{-1}y \text{\marginnote{$\left<\cdot,\cdot\right>_{\!A}$}}\]
+\[ \forall x,y\in R\quad \left<x,y\right>_{\!A} = {}^txA^{-1}y \text{\marginnote{$\left<\,\cdot\,,\,\cdot\,\right>_{\!A}$}}\]
 Cet accouplement induit un accouplement parfait~$\delta_A : \Cok(A)\times\Cok(A) \mapsto K/R$\marginnote{$\delta_A$}.
 \end{defi}
 
@@ -54,6 +53,11 @@ Cette identification se fait via les applications~$a_i = \overline{\strut b_0+\d
 
 Dans ce qui suit, on notera $\text{Sym}_n(R)$\marginnote{$\Sym_n(R)$} l'ensemble des matrices symétriques à coefficients dans un anneau $R$.\\
 Soit $A \in \Sym_n(\Zp)$ inversible ; $\Zp$ est principal donc d'après ce qui précède il existe~$a_1, \dots a_r$ tels que $\Cok(A) \simeq \bigoplus_{i=1}^r{\quotient{\Zp}{a_i\Zp}}$.\\[0.2cm]
-Or on peut écrire $a_i = p^{d_i}u_i$ avec $u_i$ inversible ; de plus on a $\quotient{\Zp}{p^{d_i}\Zp} \simeq \quotient{\mathbb Z}{p^{d_i}\mathbb Z}$ d'où :
+Or on peut écrire~$a_i = p^{d_i}u_i$ avec~$u_i$ inversible ; de plus on a~$\quotient{\Zp}{p^{d_i}\Zp} \simeq \quotient{\mathbb Z}{p^{d_i}\mathbb Z}$ d'où :
 \[ \Cok(A) \simeq \bigoplus_{i=1}^r \quotient{\mathbb Z}{p^{d_i}\mathbb Z} \]
-Ainsi, $\Cok(A)$ est un $p$-groupe.
+Ainsi,~$\Cok(A)$ est un~$p$-groupe.
+
+Il nous reste à définir une mesure sur $\Zp$ ; on utilise la mesure de Haar~$h_p$ définie par~$h_p(a+p^n\Zp) = p^{-n}$ pour tout $a\in\Zp$.\\
+Cette mesure est bien une probabilité (car~$\Zp = 0+p^0\Zp$) et est invariante par translation : pour tout~$E$ mesurable,~$a\in\Zp$,~$h_p(a+E)=h_p(E)$.
+
+On définit alors une mesure $H_{n,p}$ sur $\Sym_n(\Zp)$ en chiosissant chacun des $\frac{n(n+1)}2$ coefficients indépendamment.

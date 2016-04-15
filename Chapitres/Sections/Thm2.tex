@@ -1,0 +1,82 @@
+\section{Distribution du conoyau d'une matrice aléatoire}
+
+Le but est maintenant, étant donnée une matrice $A$ tirée selon $H_{n,p}$, de calculer la distribution de son conoyau.
+En particulier, on prouve le théorème suivant :
+
+\begin{thm}
+Soient~$\Gamma$ un~$p$-groupe fini de rang $r$, $\delta$ un accouplement sur~$\Gamma$.\\
+Alors pour~$A$ une matrice symétrique aléatoire, on a :
+\[ H_{n,p}\left[(\Cok(A),\delta_A) \simeq (\Gamma,\delta)\right] = \frac{\prod_{j=n-r+1}^{n}{(1-p^{-j})}\prod_{i=1}^{\entierSup{(n-r)/2}}{(1-p^{1-2i})}}{|\Gamma|\cdot|\Aut(\Gamma,\delta)|}\]
+\end{thm} 
+
+Afin de prouver ce théorème, nous allons avoir besoin de deux lemmes :
+
+\begin{lem}
+Soient~$A,M\in\Sym_n(\Zp)$ inversibles.\\ Alors~$\left<\,\cdot\,,\,\cdot\,\right>_{\!A} = \left<\,\cdot\,,\,\cdot\,\right>_{\!M}$ si et seulement si les conditions suivantes sont vérifiées :
+\begin{enumerate}
+\item il existe $R\in\mathcal M_n(\Zp)$ telle que $A=M+MRM$
+\item $\rg(\bar A) = rg(\bar M)$ où $\bar A$ est la réduction de $A$ modulo $p$
+\end{enumerate}
+\end{lem}
+
+\begin{dem}
+D'après la définition de~$\left<\,\cdot\,,\,\cdot\,\right>_{\!A}$ il est clair que les accouplements sont égaux si et seulement si~$A^{-1} - M^{-1} \in \mathcal{M}_n(\Zp)$.\\
+Supposons tout d'abord que ce soit le cas, et posons~$N = A^{-1} - M^{-1}$. Alors~$A^{-1}M = NM+I_n$ est dans~$\mathcal M_n(\Zp)$, et de même pour~$M^{-1}A$. \\
+Ainsi~$MA^{-1}\in \GL_n(\Zp)$ donc~$\bar M\bar A^{-1}\in \GL_n(\mathbb F_p)$ ; on en déduit que~$\rg(\bar A) = \rg(\bar M)$.\\
+Enfin,~$A = M+ANM = M + M(M^{-1}AN)M$, ce qui conclut.
+
+Réciproquement, supposons les conditions a. et b. vérifiées. Alors~$\Ker(\bar M) \subseteq \Ker(\bar A)$ et l'égalité du rang donne $\Ker(\bar M) = \Ker(\bar A)$.\\
+Soit~$v\in\Ker(\overline{I_n+AM})$, alors~$v\in\Ker(\bar A)$ donc~$v\in\Ker(\bar M)$. Ainsi~$v = 0$, d'où on déduit~$\det(\overline{I_n+AM})\neq 0$ et~$M^{-1}A = I_n+AM \in\GL_n(\Zp)$.\\
+Or, $A^{-1}-M^{-1} = -(A^{-1}M)R \in\mathcal M_n(\Zp)$,  ce qui conclut la démonstration.
+\end{dem}
+
+Soit~$[\,,\,]$ une application bilinéaire de~$\Zp^n\times\Zp^n$ dans~$\quotient{\mathbb Q_p}{\Zp}$. On définit alors :
+\[ \Cok([\,,\,]) = \quotient{\Zp^n}{\{ x\in\Zp^n\ \ |\ \ \forall y\in\Zp^n\ [x,y]=0 \}} \text{\marginnote{$\Cok([\,,\,])$}}\]
+
+\begin{rem}
+On dispose alors d'un accouplement induit~${\widehat{[\,,\,]}}$ sur~$\Cok([\,,\,])$.
+\end{rem}
+
+\begin{lem}
+Le nombre d'applications bilinéaires~$[\,,\,]$ telles que~$(\Cok([\,,\,], \widehat{[\,,\,]}) \simeq (\Gamma, \delta)$ est :
+\[ \frac{|\Gamma|^n\cdot\prod_{j=r-n+1}^{n}{(1-p^{-j})}}{|\Aut(\Gamma, \delta)|} \]
+\end{lem}
+\begin{dem}
+Soit $f$ une surjection de~$\Zp^n$ dans~$\Gamma$.\\
+Posons~$[x,y]_f = \delta(f(x),f(y))$ ; alors~$\Cok([\,,\,]) = \quotient{\Zp^n}{\Ker(f)}$ est isomorphe à~$\Im(f)=\Gamma$, et par définition cet isomorphisme envoie~$[\,,\,]_f$ sur~$\delta$.\\
+Réciproquement, si on a un isomorphisme~$f$ entre~$\Cok([\,,\,])$ et~$\Gamma$, alors~$\pi\circ f$ est une surjection de~$\Zp^n$ dans~$\Gamma$ (où~$\pi$ est la projection sur~$\Cok([\,,\,])$).\\
+On a alors de plus~$[\,,\,] = [\,,\,]_{\pi\circ f}$ ; on a donc une équivalence entre~$\Sur(\Zp^n, \Gamma)$ et les applications considérées.\\
+Or,~$[\,,\,]_f = [\,,\,]_g$  ssi~$\hat f\circ \hat g^{-1}\in \Aut(\Gamma, \delta)$ ; ainsi le cardinal cherché est~$|\Sur(\Zp^n,\Gamma)|/|Aut(\Gamma, \delta)|$.
+
+Calculons donc~$|\Sur(\Zp^n,\Gamma)|$ ; par le lemme de Nakayama, une fonction de~$\Zp^n$ dans~$\Gamma$ est surjective ssi elle est surjective modulo~$p$. Une surjection est donnc donnée par :
+\begin{itemize}
+\item une surjection de~$\mathbb{F}_p^n$ dans~$\quotient{\Gamma}{p\Gamma}\simeq\mathbb{F}_p^r$
+\item un relèvement des images d'une base de~$\mathbb F_p^n$ de~$\mathbb F_p^r$ dans~$\Gamma$
+\end{itemize}
+Par dualité, le premier cardinal est égal à celui des injections de~$\mathbb F_p^r$ dans~$\mathbb F_p^n$, qui vaut~$\prod_{i=0}^{r-1}{(p^n-p^i)}$.\\
+Pour relever un élément de~$\mathbb F_p$ dans~$\mathbb F_{p^d}$, on a~$p^{d-1}=p^d/p$ possibilités ; ainsi on a~$|\Gamma|/p^r$ possibilités de relèvement pour un élément. On a donc
+\[ |\Sur(\Zp^n, \Gamma)| = \frac{|\Gamma|\cdot \prod_{i=0}^{r-1}(p^n-p^i)}{p^{nr}}, \]
+et le lemme s'en déduit.
+\end{dem}
+
+\begin{proof}[Démonstration du théorème]
+Soit~$A$ une matrice aléatoire tirée selon la mesure de Haar ; on peut supposer~$A$ non singulière. On remarque alors que~$\Cok(\left<\,\cdot\,,\,\cdot\,\right>_{\!A}) = \Cok(A)$, donc nous allons nous intéresser aux applications bilinéaires étudiées plus haut.\\
+On a calculé jusqu'ici le nombre d'applications bilinéaires dont le quotient est isomorphe à~$(\Gamma, \delta)$ ; il nous reste donc à déterminer la probabilité que $\left<\,\cdot\,,\,\cdot\,\right>_{\!A}$ soit isomorphe à~$[\,,\,]$ fixé, tel que~$\Cok([\,,\,])$ est isomorphe à $(\Gamma,\delta)$. Remarquons que la mesure de Haar sur~$\Zp$ étant invariante par translation,~$H_n,p$ est invariante par changement de base.
+
+Supposons~$p$ impair ; soit $N$ une matrice de~$\mathcal{M}_n(\mathbb Q_p)$ telle que~$N_{i,j}$ soit un relèvement de~$[e_i, e_j]$ dans~$\mathbb Q_p$. La classification des formes quadratiques sur~$\mathbb{Q}_p$ nous donne l'existence de~$H\in\mathcal M_n(\Zp)$ telle que~${}^tHNH$ soit diagonale. Par invariance de la mesure de Haar, on peut donc directement supposer que~$N$ est diagonale, et poser~$M = N^{-1}$.
+
+Quitte à changer le relèvement, on peut supposer que les coefficients de~$N$ ont une valuation $p$-adique négative, donc~$M$ a ses coefficients dans~$\Zp$, qu'on note~$p^{d_1}u_1, \dots, p^{d_n}u_n$ avec~$u_i$ inversible. Dès lors,
+\[ \Gamma = \bigoplus_{i=1}^{n}\quotient{\Zp}{p^{d_i}\Zp} \]
+d'où on déduit que sans perte de généralité~$d_1=\dots=d_{n-r}=0$, les autres valuations étant non nulles.
+
+On a alors~$[\,,\,] = \left<\,\cdot\,,\,\cdot\,\right>_{\!M}$ ; ainsi on cherche la probabilité que~$\left<\,\cdot\,,\,\cdot\,\right>_{\!A}=\left<\,\cdot\,,\,\cdot\,\right>_{\!M}$ ; donc que~$A$ et~$M$ vérifient les conditions du lemme D.2.\\
+La deuxième condition donne pour~$i<j$,~$p^{d_i+d_j} | a_{i,j}$ et~$p^{2d_i} | a_{i,i}-p^{d_i}u_i$. Cela revient dans tous les cas à fixer les~$(d_i+d_j)$ premiers chiffres de~$a_{i,j}$ ; la probabilité que~$A$ vérifie ces conditions est donc :
+\[ \prod_{1\leq i\leq j\leq n}p^{-(d_i+d_j)} = \prod_{i=1}^{n}p^{-(n+1)d_i} = \frac1{|\Gamma|^{n+1}}\]
+
+On remarque que selon ces conditions,~$\bar A$ est nulle en dehors du mineur en haut à gauche de taille~$n-r$, qui est indépendant des coefficients déterminés précédemment. Or~$\rg(\bar M) = n-r$ donc ce mineur doit être inversible ; il est distribué uniformément dans $\Sym_{n-r}(\mathbb F_p)$ donc la probabilité qu'il soit inversible est
+\[ \frac{|\GL_{n-r}(\mathbb F_p)\cap \Sym_{n-r}(\mathbb F_p)|}{|\Sym_{n-r}(\mathbb F_p)|}= \prod_{i=1}^{\entierSup{(n-r)/2}}{(1-p^{1-2i})} \]
+La dernière égalité provient de [TODO].
+
+Ainsi, étant donné que la probabilité ne dépend pas de~$M$, on a finalement en multipliant :
+\[ H_{n,p}\left[(\Cok(A),\delta_A) \simeq (\Gamma,\delta)\right] = \frac{\prod_{j=n-r+1}^{n}{(1-p^{-j})}\prod_{i=1}^{\entierSup{(n-r)/2}}{(1-p^{1-2i})}}{|\Gamma|\cdot|\Aut(\Gamma,\delta)|} \]
+\end{proof}
