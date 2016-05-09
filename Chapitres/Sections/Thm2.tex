@@ -9,13 +9,13 @@ Alors pour~$A$ une matrice symétrique aléatoire, on a :
 \[ H_{n,p}\left[(\Cok(A),\delta_A) \simeq (\Gamma,\delta)\right] = \frac{\prod_{j=n-r+1}^{n}{(1-p^{-j})}\prod_{i=1}^{\entierSup{(n-r)/2}}{(1-p^{1-2i})}}{|\Gamma|\cdot|\Aut(\Gamma,\delta)|}\]
 \end{thm} 
 
-Afin de prouver ce théorème, nous allons avoir besoin de deux lemmes :
+Afin de prouver ce théorème, nous allons avoir besoin de plusieurs lemmes :
 
 \begin{lem}
 Soient~$A,M\in\Sym_n(\Zp)$ inversibles. Alors~$\left<\,\cdot\,,\,\cdot\,\right>_{\!A} = \left<\,\cdot\,,\,\cdot\,\right>_{\!M}$ si et seulement si les conditions suivantes sont vérifiées :
 \begin{enumerate}
 \item il existe $R\in\mathcal M_n(\Zp)$ telle que $A=M+MRM$
-\item $\rg(\bar A) = rg(\bar M)$ où $\bar A$ est la réduction de $A$ modulo $p$
+\item $\rg(\bar A) = \rg(\bar M)$ où $\bar A$ est la réduction de $A$ modulo $p$
 \end{enumerate}
 \end{lem}
 
@@ -50,7 +50,7 @@ Réciproquement, si on a un isomorphisme~$f$ entre~$\Cok([\,,\,])$ et~$\Gamma$, 
 On a alors de plus~$[\,,\,] = [\,,\,]_{\pi\circ f}$ ; on a donc une équivalence entre~$\Sur(\Zp^n, \Gamma)$ et les applications considérées.
 Or,~$[\,,\,]_f = [\,,\,]_g$  ssi~$\hat f\circ \hat g^{-1}\in \Aut(\Gamma, \delta)$ ; ainsi le cardinal cherché est~$|\Sur(\Zp^n,\Gamma)|/|Aut(\Gamma, \delta)|$.
 
-Calculons donc~$|\Sur(\Zp^n,\Gamma)|$ ; par le lemme de Nakayama, une fonction de~$\Zp^n$ dans~$\Gamma$ est surjective ssi elle est surjective modulo~$p$. Une surjection est donnc donnée par :
+Calculons donc~$|\Sur(\Zp^n,\Gamma)|$ ; par le lemme de Nakayama, une fonction de~$\Zp^n$ dans~$\Gamma$ est surjective ssi elle est surjective modulo~$p$. Une surjection est donc donnée par :
 \begin{itemize}
 \item une surjection de~$\mathbb{F}_p^n$ dans~$\quotient{\Gamma}{p\Gamma}\simeq\mathbb{F}_p^r$
 \item un relèvement des images d'une base de~$\mathbb F_p^n$ de~$\mathbb F_p^r$ dans~$\Gamma$
@@ -61,11 +61,22 @@ Pour relever un élément de~$\mathbb F_p$ dans~$\mathbb F_{p^d}$, on a~$p^{d-1}
 et le lemme s'en déduit.
 \end{dem}
 
+On rappelle enfin le lemme de classification des formes quadratiques sur~$\mathbb Q_p$, tiré de \cite{quad} :
+\begin{lem}
+Soit~$p$ un nombre premier,~$M$ la matrice d'une forme symétrique sur $\mathbb Q_p$. Alors il existe une matrice $H\in\GL_n(\Zp)$ telle que :
+\begin{itemize}
+	\item si~$p$ est impair,~${}^tHMH$ est diagonale
+	\item si~$p=2$, ${}^tHMH$ est diagonale par blocs, avec des blocs de taille au plus~$2\times2$
+\end{itemize}
+\end{lem}
+
+Afin de simplifier la démonstration du théorème, on supposera par la suite que~$p$ est impair.
+
 \begin{proof}[Démonstration du théorème]
 Soit~$A$ une matrice aléatoire tirée selon la mesure de Haar ; on peut supposer~$A$ non singulière. On remarque alors que~$\Cok(\left<\,\cdot\,,\,\cdot\,\right>_{\!A}) = \Cok(A)$, donc nous allons nous intéresser aux applications bilinéaires étudiées plus haut.
-On a calculé jusqu'ici le nombre d'applications bilinéaires dont le quotient est isomorphe à~$(\Gamma, \delta)$ ; il nous reste donc à déterminer la probabilité que $\left<\,\cdot\,,\,\cdot\,\right>_{\!A}$ soit isomorphe à~$[\,,\,]$ fixé, tel que~$\Cok([\,,\,])$ est isomorphe à $(\Gamma,\delta)$. Remarquons que la mesure de Haar sur~$\Zp$ étant invariante par translation,~$H_n,p$ est invariante par changement de base.
+On a calculé jusqu'ici le nombre d'applications bilinéaires dont le quotient est isomorphe à~$(\Gamma, \delta)$ ; il nous reste donc à déterminer la probabilité que $\left<\,\cdot\,,\,\cdot\,\right>_{\!A}$ soit isomorphe à~$[\,,\,]$ fixé, tel que~$\Cok([\,,\,])$ est isomorphe à $(\Gamma,\delta)$. Remarquons que la mesure de Haar sur~$\Zp$ étant invariante par translation,~$H_{n,p}$ est invariante par changement de base.
 
-Supposons~$p$ impair ; soit $N$ une matrice de~$\mathcal{M}_n(\mathbb Q_p)$ telle que~$N_{i,j}$ soit un relèvement de~$[e_i, e_j]$ dans~$\mathbb Q_p$. La classification des formes quadratiques (voir par exemple \cite{quad}, section 15.4.4) sur~$\mathbb{Q}_p$ nous donne l'existence de~$H\in\mathcal M_n(\Zp)$ telle que~${}^tHNH$ soit diagonale. Par invariance de la mesure de Haar, on peut donc directement supposer que~$N$ est diagonale, et poser~$M = N^{-1}$.
+Soit $N$ une matrice de~$\mathcal{M}_n(\mathbb Q_p)$ telle que~$N_{i,j}$ soit un relèvement de~$[e_i, e_j]$ dans~$\mathbb Q_p$. La classification des formes quadratiques sur~$\mathbb{Q}_p$ nous donne l'existence de~$H\in\GL_n(\Zp)$ telle que~${}^tHNH$ soit diagonale. Par invariance de la mesure de Haar, on peut donc directement supposer que~$N$ est diagonale, et poser~$M = N^{-1}$.
 
 Quitte à changer le relèvement, on peut supposer que les coefficients de~$N$ ont une valuation $p$-adique négative, donc~$M$ a ses coefficients dans~$\Zp$, qu'on note~$p^{d_1}u_1, \dots, p^{d_n}u_n$ avec~$u_i$ inversible. Dès lors,
 \[ \Gamma = \bigoplus_{i=1}^{n}\quotient{\Zp}{p^{d_i}\Zp} \]

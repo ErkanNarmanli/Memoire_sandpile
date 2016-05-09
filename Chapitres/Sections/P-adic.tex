@@ -17,15 +17,15 @@ On définit alors le conoyau de $A$ comme :
 \[\Cok(A) = \bigoplus_{i=1}^n{\quotient{R}{a_iR}}\]
 \end{rem}
 
-Afin de poursuivre l'analogie avec le laplacien, il nous faut définir un accouplement canonique associé à une matrice symétrique~$A$ quelconque. Pour cela, il nous faut supposer que~$A$ est inversible dans~$K = \Frac(R)$, ie que~$\det(A)\neq0$.
+Afin de poursuivre l'analogie avec le laplacien, il nous faut définir un accouplement canonique associé à une matrice symétrique~$A$ quelconque. Pour cela, il nous faut supposer que~$A$ est inversible dans~$K = \Frac(R)$, i.e. que~$\det(A)\neq0$.
 \begin{defi}
-Soit~$A$ une matrice de~$\mathcal{M}_n(R)$ non singulière (ie telle que~$\det(A)\neq 0$).
+Soit~$A$ une matrice de~$\mathcal{M}_n(R)$ non singulière (i.e. telle que~$\det(A)\neq 0$).
 On peut alors définir un accouplement de $R\times R$ dans $\quotient{K}{R}$ défini par :
 \[ \forall x,y\in R\quad \left<x,y\right>_{\!A} = {}^txA^{-1}y \text{\marginnote{$\left<\,\cdot\,,\,\cdot\,\right>_{\!A}$}}\]
 Cet accouplement induit un accouplement parfait~$\delta_A : \Cok(A)\times\Cok(A) \mapsto K/R$\marginnote{$\delta_A$}.
 \end{defi}
 
-On dispose maintenant pour toute matrice d'un couple~$(\Cok(A), \delta_A)$ ; il nous reste maintenant à nous placer dans un anneau tel que~$\Cok(A)$ soit un~$p$-groupe.
+On dispose maintenant pour toute matrice~$A$ d'un couple~$(\Cok(A), \delta_A)$ ; il nous reste maintenant à nous placer dans un anneau tel que~$\Cok(A)$ soit un~$p$-groupe.
 
 \subsection{Entiers $p$-adiques}
 
@@ -48,8 +48,12 @@ On peut identifier $\Zp$ à un anneau de sommes formelles :
 Cette identification se fait via les applications~$a_i = \overline{\strut b_0+\dots+b_{i-1}p^{i-1}}$ et~$b_i = \frac{a_{i+1}-a_i}{\strut p^i}$.
 \end{rem}
 
+On peut définir une topologie sur~$\Zp$ en choisissant comme base d'ouverts l'ensemble des~$U_a(n) = n + p^a\Zp$, où~$n\in\Zp$ et~$a\in\mathbb N$. Cette topologie est métrisable, associée à la distance $d_p(x,y) = \max\{n\in\mathbb N \ \ ;\  \ p^n | x-y\}$.
+
+\vspace{0.2cm}
 Dans ce qui suit, on notera $\text{Sym}_n(R)$\marginnote{$\Sym_n(R)$} l'ensemble des matrices symétriques à coefficients dans un anneau $R$.
 Soit $A \in \Sym_n(\Zp)$ inversible ; $\Zp$ est principal donc d'après ce qui précède il existe~$a_1, \dots a_r$ tels que $\Cok(A) \simeq \bigoplus_{i=1}^r{\quotient{\Zp}{a_i\Zp}}$.
+
 Or on peut écrire~$a_i = p^{d_i}u_i$ avec~$u_i$ inversible ; de plus on a~$\quotient{\Zp}{p^{d_i}\Zp} \simeq \quotient{\mathbb Z}{p^{d_i}\mathbb Z}$ d'où :
 \[ \Cok(A) \simeq \bigoplus_{i=1}^r \quotient{\mathbb Z}{p^{d_i}\mathbb Z} \]
 Ainsi,~$\Cok(A)$ est un~$p$-groupe.
