@@ -1,5 +1,5 @@
 \section{Accouplements de dualité}
-	Soient~$D_1$ un diviseur de de~$G$ de degré nul. Puisque~$\Jac(G)$ est un groupe d'ordre fini, alors il existe~$m_1$ un entier positif non nul tel que la classe~$\overline{D_1}$ de~$D_1$ dans~$\Jac(G)$ vérifie~$m_1 \overline{D_1}=\overline{0}$ ; c'est àord dire~$m_1 D_1 \in \Princ(G)$. Ainsi on prend~$m_1, m_2$ des entiers tels que :
+	Soient~$D_1$ un diviseur de~$G$ de degré nul. Puisque~$\Jac(G)$ est un groupe d'ordre fini, alors il existe~$m_1$ un entier positif non nul tel que la classe~$\overline{D_1}$ de~$D_1$ dans~$\Jac(G)$ vérifie~$m_1 \overline{D_1}=\overline{0}$ ; c'est à dire~$m_1 D_1 \in \Princ(G)$. Ainsi on prend~$m_1, m_2$ des entiers tels que :
 	\begin{align*}
 		m_1 D_1 &= \divi(f_1)\\
 		m_2 D_2 &= \divi(f_2),
@@ -9,7 +9,15 @@
 		\scalaire{D_1}{D_2} = \frac{1}{m_2} \sum_{v\in V}D_1(v) f_2(v).	\text{\marginnote{$\scalaire{\,\cdot\,}{\,\cdot\,}$}}
 	\]
 	\begin{rem}
-		L'application~$\scalaire{\,\cdot\,}{\,\cdot\,}$ est symétrique et bilinéaire. Le caractère bilinéaire est clair, pour démontrer que caractère symétrique il suffit de remplacer~$D_1(v)$ par~$\divi(f_1)/m_1$ dans la définition plus haut, puis de mettre ensemble les deux contributions des~$u,v$ voisins, ce qui nous donne une expression clairement symétrique en~$f_1,f_2$.
+		L'application~$\scalaire{\,\cdot\,}{\,\cdot\,}$ est symétrique et bilinéaire. Le caractère bilinéaire est clair, pour démontrer le caractère symétrique il suffit de remplacer~$D_1(v)$ par~$\ord_v(f_1)/m_1$ dans la définition plus haut, puis de mettre ensemble les deux contributions des~$u,v$ voisins, ce qui nous donne une expression clairement symétrique en~$f_1,f_2$ :
+		\[
+			\scalaire{D_1}{D_2} = \frac{1}{m_1 \cdot m_2}
+			\sum_{u \sim v}\Big(
+				f_2(v)\left(f_1(u) - f_1(v)\right)
+				+
+				f_3(u)\left(f_1(v)-f_1(u)\right)
+			\Big).
+		\]
 	\end{rem}
 	\begin{rem}
 		On remarque par ailleurs que si~$D_1$ (ou~$D_2$) est dans~$\Princ(G)$, alors~$m_1$ (ou~$m_2$) vaut~$1$ et donc~$\scalaire{D_1}{D_2}$ est dans~$\mathbb{Z}$. On peut donc passer au quotient, ce qui nous permet de définir :
@@ -21,7 +29,7 @@
 	\begin{defi}
 		Une application~$\delta : \Gamma\times\Gamma \rightarrow \mathbb{Q}/\mathbb{Z}$ est dite \emph{parfaite} \marginnote{app. parfaite} lorsque pour tout~$x$ dans~$\Gamma$ on a : pour tout~$y$ dans~$\Gamma, \delta(x,y) = 0$ si et seulement si~$x = 0$.
 		
-		On dit que~$\delta$ est un \emph{accouplement} \marginnote{accouplement} lorsque que~$\delta$ est symétrique, bilinéaire, et parfaite.
+		On dit que~$\delta$ est un \emph{accouplement} \marginnote{accouplement} lorsque~$\delta$ est symétrique, bilinéaire, et parfaite.
 	\end{defi}
 	\begin{prop}
 		L'application~$\delta_G$ est un accouplement.
@@ -31,9 +39,9 @@
 		
 		Pour le sens direct : si pour tout diviseur~$D_2$ on a que~$\scalaire{D_1}{D_2}$ est un entier, alors en particulier en prenant les diviseurs~$D_2 = (v_k) - (v_1)$ pour~$2\leq k \leq n$ on a pour tout entier~$k$ entre~$2$ et~$n$ que~$(f_1(v_k)-f_1(v_1))/m_1$ est un entier, que l'on notera~$f(k)$. Cela revient à dire que l'on peut écrire :
 		\[
-			\frac{f_1}{m_1} = \frac{f_1(v_1)}{m_1} \cdot \cooord{1}{\vdots}{1} + f \quad , f\in\mathcal{M}(G).
+			\frac{f_1}{m_1} = \frac{f_1(v_1)}{m_1} + f \quad , f\in\mathcal{M}(G).
 		\]
-		Dès lors on peut passer au diviseurs dans l'expression ci-dessus, sachant que le diviseur est linéaire et que le diviseur du vecteur colonne~$1$ est nul, cela nous donne que~$D_1 = \frac{1}{m_1}\divi(f_1) = \divi(f)$ est principal, ce qui est bien ce que nous souhaitions montrer.
+		Dès lors on peut passer au diviseurs dans l'expression ci-dessus, sachant que~$\divi(f+c) = \divi(f)$ pour toute constante~$c$, cela nous donne que~$D_1 = \frac{1}{m_1}\divi(f_1) = \divi(f)$ est principal, ce qui est bien ce que nous souhaitions montrer.
 		
 		La réciproque est triviale puisque~$\delta_G$ est bilinéaire.
 	\end{dem}
